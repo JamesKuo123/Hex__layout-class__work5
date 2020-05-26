@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- font-family: 'Lato', sans-serif; -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <!-- font-family: 'Roboto Mono', monospace; -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <!-- icon cdn-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- project css -->
+    <link rel="stylesheet" href="./assets/style/all.css">
+</head>
+<body>
+    
+    <div class="side d-flex flex-column">
+        <div class="side__header pt-32 pl-32 pb-32">
+            <h1 class="logo lh-24">
+                <a href="index.html">
+                    <img src="./assets/images/logo-ANSWER.svg" alt="logo">
+                </a>
+            </h1>
+        </div>
+        <div class="side__body flex-grow-1">
+            <ul class="menu list-unstyled">
+                <li class="item mb-4">
+                    <a href="#" class="text-title pl-32 position-relative d-flex align-items-center">
+                        <span class="material-icons mr-3">insert_chart</span>
+                        Dashboard
+                    </a>
+                </li>
+                <li class="item mb-4">
+                    <a href="#" class="text-title pl-32 position-relative d-flex align-items-center">
+                        <span class="material-icons mr-3">forum</span>
+                        Question
+                    </a>
+                </li>
+                <li class="item mb-4 active">
+                    <a href="index.html" class="text-title pl-32 position-relative d-flex align-items-center">
+                        <span class="material-icons mr-3">assignment</span>
+                        Assignment
+                    </a>
+                </li>
+                <li class="item mb-4">
+                    <a href="#" class="text-title pl-32 position-relative d-flex align-items-center">
+                        <span class="material-icons mr-3">video_library</span>
+                        Course
+                    </a>
+                </li>
+                <li class="item mb-4">
+                    <a href="admin.html" class="text-title pl-32 position-relative d-flex align-items-center">
+                        <span class="material-icons mr-3">group</span>
+                        Admin
+                    </a>
+                </li>
+                <li class="item mb-4">
+                    <a href="#" class="text-title pl-32 position-relative d-flex align-items-center">
+                        <span class="material-icons mr-3">settings</span>
+                        Settings
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="side__footer pl-32 pb-32">
+            <div class="media d-flex align-items-center">
+                <div class="img profileImg mr-3" style="background-image: url(https://images.unsplash.com/photo-1514794749374-fb67509dbb7f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80);"></div>
+                <div class="media-body">
+                  <h5 class="m-0 text-title lh-24">Andy Chen</h5>
+                  <span>andy0401@mail.com</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main p-32">
+        <div class="main__header d-flex justify-content-between align-items-center pb-32 mb-12">
+            <div class="space-left d-flex align-items-center">
+                <h2 class="title mb-0 lh-24">Assignment</h2>
+                <div class="categoryDropdown">
+                    <div class="dropdown">
+                        <button class="btn text-title d-flex align-items-center p-0 border-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            All Courses
+                          <span class="material-icons ml-2 color_primary">keyboard_arrow_down</span>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                      </div>
+                </div>
+            </div>
+            <div class="space-right">
+                <ul class="toolbar d-flex m-0 list-unstyled">
+                    <li class="item ml-4">
+                        <a href="#" class="d-flex align-items-center">
+                            <span class="material-icons">search</span>
+                        </a>
+                    </li>
+                    <li class="item ml-4">
+                        <a href="#" class="d-flex align-items-center">
+                            <span class="material-icons">notifications_active</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main__body d-flex">
+            <div class="main__body__space-left pr-3 flex-shrink-0">
+                <div class="categoryCollapse">
+                    <a class="btn p-0 border-0 d-flex align-items-center text-title" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        All (4)
+                        <div class="material-icons ml-2">keyboard_arrow_down</div>
+                    </a>
+                    <div class="collapse show" id="collapseExample">
+                        <div class="list-group rounded-2px" id="list-tab" role="tablist">
+                            <a class="list-group-item p-0 list-group-item-action active d-flex justify-content-between project_color_border" id="list-home-list" data-toggle="list" href="#mail1" role="tab" aria-controls="home">
+                                <div class="space-left pt-12 pl-12 pb-12 w-50">
+                                    <div class="category text-subtitle text-truncate">Chapter Assignment 2</div>
+                                    <div class="title text-title text-truncate">Please check this file for me, thanks!</div>
+                                </div>
+                                <div class="space-right text-right pt-12 pr-12 pb-12 w-50">
+                                    <div class="time text-subtitle">4 hrs ago</div>
+                                    <div class="name text-remark">Emily Wang</div>
+                                </div>
+                            </a>
+                            <a class="list-group-item p-0 list-group-item-action d-flex justify-content-between project_color_border" id="list-home-list" data-toggle="list" href="#mail2" role="tab" aria-controls="home">
+                                <div class="space-left pt-12 pl-12 pb-12 w-50">
+                                    <div class="category text-subtitle text-truncate">Chapter Assignment 1</div>
+                                    <div class="title text-title text-truncate">My Homework</div>
+                                </div>
+                                <div class="space-right text-right pt-12 pr-12 pb-12 w-50">
+                                    <div class="time text-subtitle">12 hrs ago</div>
+                                    <div class="name text-remark">David Xu</div>
+                                </div>
+                            </a>
+                            <a class="list-group-item p-0 list-group-item-action d-flex justify-content-between project_color_border" id="list-home-list" data-toggle="list" href="#mail3" role="tab" aria-controls="home">
+                                <div class="space-left pt-12 pl-12 pb-12 w-50">
+                                    <div class="category text-subtitle text-truncate">Final Assignment</div>
+                                    <div class="title text-title text-truncate">Have a problem with this text text text text text</div>
+                                </div>
+                                <div class="space-right text-right pt-12 pr-12 pb-12 w-50">
+                                    <div class="time text-subtitle">18 hrs ago</div>
+                                    <div class="name text-remark">Tony Wei</div>
+                                </div>
+                            </a>
+                            <a class="list-group-item p-0 list-group-item-action d-flex justify-content-between project_color_border" id="list-home-list" data-toggle="list" href="#mail4" role="tab" aria-controls="home">
+                                <div class="space-left pt-12 pl-12 pb-12 w-50">
+                                    <div class="category text-subtitle text-truncate">Final Assignment</div>
+                                    <div class="title text-title text-truncate">Did I do it right?</div>
+                                </div>
+                                <div class="space-right text-right pt-12 pr-12 pb-12 w-50">
+                                    <div class="time text-subtitle">19 hrs ago</div>
+                                    <div class="name text-remark">Christina Lin</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main__body__space-right flex-grow-1 position-relative">
+                <div class="commentNum text-right text-remark">2 comments</div>
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active card project_color_border rounded-2px" id="mail1" role="tabpanel" aria-labelledby="list-home-list">
+                        <h5 class="lh-24 card-header p-0 bg-secondary d-flex justify-content-between align-items-center">
+                            <div class="space-left pt-12 pl-12 pb-12">
+                                <div class="category text-subtitle">Chapter Assignment 2 / HTML&CSS</div>
+                                <div class="title text-title">Please check this file for me, thanks!</div>
+                            </div>
+                            <div class="space-right pt-12 pr-12 pb-12">
+                                <a href="#" class="material-icons d-flex align-items-center">more_vert</a>
+                            </div>
+                        </h5>
+                        <div class="card-body pt-3 pl-3 pr-32 pb-0">
+                            <div class="media d-flex align-items-center mb-3">
+                                <div class="img profileImg mr-2" style="background-image: url(https://images.unsplash.com/photo-1504051771394-dd2e66b2e08f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2134&q=80);"></div>
+                                <div class="media-body d-flex justify-content-between align-items-center">
+                                    <div class="space-left">
+                                        <h5 class="m-0 text-title lh-24">Emily Wang</h5>
+                                        <p class="text-remark m-0">10:38 AM (4 hours ago)</p>
+                                    </div>
+                                    <div class="space-right d-flex">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mailContent pl-5 text-content pb-3">
+                                Hi Teacher, the attached file is my homework of chapter 2. And here comes a question: Why in the following code the height of the <span class="text-code">div</span> is bigger than the height of the <span class="text-code">img</span> ? There is a gap below the image, but it doesn’t seems to be a padding/margin. <br>
+                                What is the gap or extra space below image?
+                            </div>
+                            <a href="#" download="index.html" class="text-title d-inline-flex align-items-center downloadBtn ml-5 bg-secondary project_color_border pt-2 pl-12 pb-2 pr-12 rounded-2px">
+                                <div class="material-icons mr-2">attach_file</div>
+                                HW-2-David.zip
+                            </a>
+                            <hr class="ml-5 mb-0">
+                        </div>
+                        <div class="card-body pt-3 pl-3 pr-32 pb-0">
+                            <div class="media d-flex align-items-center mb-3">
+                                <div class="img profileImg mr-2" style="background-image: url(https://images.unsplash.com/photo-1514794749374-fb67509dbb7f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80);"></div>
+                                <div class="media-body d-flex justify-content-between align-items-center">
+                                    <div class="space-left">
+                                        <h5 class="m-0 text-title lh-24">Andy Chen (You)</h5>
+                                        <p class="text-remark m-0">13:24 AM (1 hours ago)</p>
+                                    </div>
+                                    <div class="space-right d-flex">
+                                        <a href="#" class="material-icons d-flex align-items-center">star_border</a>
+                                        <a href="#" class="material-icons d-flex align-items-center ml-4">edit</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mailContent pl-5 text-content pb-3">
+                                Hi David, by default, an image is rendered inline, like a letter so it sits on the same line that a, b, c and d sit on. There is space below that line for the descenders you find on letters like g, j, p and q.
+                                <br>
+                                <br>
+                                You can:
+                                <br>
+                                <br>
+                                <ul class="m-0 pl-3">
+                                    <li>adjust the <span class="text-code">vertical-align</span> of the image to position it elsewhere (e.g. the <span class="text-code">middle</span>)</li>
+                                    <li>change the <span class="text-code">display</span> so it isn’t inline.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <br class="pb-2">
+                    </div>
+                    <div class="tab-pane fade card project_color_border rounded-2px" id="mail2" role="tabpanel" aria-labelledby="list-home-list">
+                        <h5 class="lh-24 card-header p-0 bg-secondary d-flex justify-content-between align-items-center">
+                            <div class="space-left pt-12 pl-12 pb-12">
+                                <div class="category text-subtitle">subtitlesubtitlesubtitlesubtitlesubtitle</div>
+                                <div class="title text-title">titletitletitletitletitletitle</div>
+                            </div>
+                            <div class="space-right pt-12 pr-12 pb-12">
+                                <a href="#" class="material-icons d-flex align-items-center">settings</a>
+                            </div>
+                        </h5>
+                        <div class="card-body pt-3 pl-3 pr-32 pb-0">
+                            <div class="media d-flex align-items-center mb-3">
+                                <div class="img profileImg mr-2" style="background-image: url(https://images.unsplash.com/photo-1514794749374-fb67509dbb7f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80);"></div>
+                                <div class="media-body d-flex justify-content-between align-items-center">
+                                    <div class="space-left">
+                                        <h5 class="m-0 text-title lh-24">asdadsadadsad</h5>
+                                        <p class="text-remark m-0">text text text</p>
+                                    </div>
+                                    <div class="space-right d-flex">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mailContent pl-5 text-content pb-3">
+                                Hi Teacher, the attached file is my homework of chapter 2. And here comes a question: Why in the following code the height of the <span class="text-code">div</span> is bigger than the height of the <span class="text-code">img</span> ? There is a gap below the image, but it doesn’t seems to be a padding/margin. <br>
+                                What is the gap or extra space below image?
+                            </div>
+                            <a href="#" class="text-title d-inline-flex align-items-center downloadBtn ml-5 bg-secondary project_color_border pt-2 pl-12 pb-2 pr-12 rounded-2px">
+                                <div class="material-icons mr-2">settings</div>
+                                download
+                            </a>
+                            <hr class="ml-5 mb-0">
+                        </div>
+                        <div class="card-body pt-3 pl-3 pr-32 pb-0">
+                            <div class="media d-flex align-items-center mb-3">
+                                <div class="img profileImg mr-2" style="background-image: url(https://images.unsplash.com/photo-1514794749374-fb67509dbb7f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80);"></div>
+                                <div class="media-body d-flex justify-content-between align-items-center">
+                                    <div class="space-left">
+                                        <h5 class="m-0 text-title lh-24">text text</h5>
+                                        <p class="text-remark m-0">text text text</p>
+                                    </div>
+                                    <div class="space-right d-flex">
+                                        <a href="#" class="material-icons d-flex align-items-center">settings</a>
+                                        <a href="#" class="material-icons d-flex align-items-center ml-4">settings</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mailContent pl-5 text-content pb-3">
+                                Hi David, by default, an image is rendered inline, like a letter so it sits on the same line that a, b, c and d sit on. There is space below that line for the descenders you find on letters like g, j, p and q.
+                                <br>
+                                <br>
+                                You can:
+                                <br>
+                                <br>
+                                <ul class="m-0 pl-3">
+                                    <li>adjust the <span class="text-code">vertical-align</span> of the image to position it elsewhere (e.g. the <span class="text-code">middle</span>)</li>
+                                    <li>change the <span class="text-code">display</span> so it isn’t inline.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <br class="pb-2">
+                    </div>
+                    <div class="tab-pane fade card project_color_border rounded-2px" id="mail3" role="tabpanel" aria-labelledby="list-home-list">
+                        <h5 class="lh-24 card-header p-0 bg-secondary d-flex justify-content-between align-items-center">
+                            <div class="space-left pt-12 pl-12 pb-12">
+                                <div class="category text-subtitle">subtitlesubtitlesubtitlesubtitlesubtitle</div>
+                                <div class="title text-title">titletitletitletitletitletitle</div>
+                            </div>
+                            <div class="space-right pt-12 pr-12 pb-12">
+                                <a href="#" class="material-icons d-flex align-items-center">settings</a>
+                            </div>
+                        </h5>
+                        <div class="card-body pt-3 pl-3 pr-32 pb-0">
+                            <div class="media d-flex align-items-center mb-3">
+                                <div class="img profileImg mr-2" style="background-image: url(https://images.unsplash.com/photo-1514794749374-fb67509dbb7f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80);"></div>
+                                <div class="media-body d-flex justify-content-between align-items-center">
+                                    <div class="space-left">
+                                        <h5 class="m-0 text-title lh-24">asdadsadadsad</h5>
+                                        <p class="text-remark m-0">text text text</p>
+                                    </div>
+                                    <div class="space-right d-flex">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mailContent pl-5 text-content pb-3">
+                                Hi Teacher, the attached file is my homework of chapter 2. And here comes a question: Why in the following code the height of the <span class="text-code">div</span> is bigger than the height of the <span class="text-code">img</span> ? There is a gap below the image, but it doesn’t seems to be a padding/margin. <br>
+                                What is the gap or extra space below image?
+                            </div>
+                            <a href="#" class="text-title d-inline-flex align-items-center downloadBtn ml-5 bg-secondary project_color_border pt-2 pl-12 pb-2 pr-12 rounded-2px">
+                                <div class="material-icons mr-2">settings</div>
+                                download
+                            </a>
+                            <hr class="ml-5 mb-0">
+                        </div>
+                        <div class="card-body pt-3 pl-3 pr-32 pb-0">
+                            <div class="media d-flex align-items-center mb-3">
+                                <div class="img profileImg mr-2" style="background-image: url(https://images.unsplash.com/photo-1514794749374-fb67509dbb7f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80);"></div>
+                                <div class="media-body d-flex justify-content-between align-items-center">
+                                    <div class="space-left">
+                                        <h5 class="m-0 text-title lh-24">text text</h5>
+                                        <p class="text-remark m-0">text text text</p>
+                                    </div>
+                                    <div class="space-right d-flex">
+                                        <a href="#" class="material-icons d-flex align-items-center">settings</a>
+                                        <a href="#" class="material-icons d-flex align-items-center ml-4">settings</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mailContent pl-5 text-content pb-3">
+                                Hi David, by default, an image is rendered inline, like a letter so it sits on the same line that a, b, c and d sit on. There is space below that line for the descenders you find on letters like g, j, p and q.
+                                <br>
+                                <br>
+                                You can:
+                                <br>
+                                <br>
+                                <ul class="m-0 pl-3">
+                                    <li>adjust the <span class="text-code">vertical-align</span> of the image to position it elsewhere (e.g. the <span class="text-code">middle</span>)</li>
+                                    <li>change the <span class="text-code">display</span> so it isn’t inline.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <br class="pb-2">
+                    </div>
+                    <div class="tab-pane fade card project_color_border rounded-2px" id="mail4" role="tabpanel" aria-labelledby="list-home-list">
+                        <h5 class="lh-24 card-header p-0 bg-secondary d-flex justify-content-between align-items-center">
+                            <div class="space-left pt-12 pl-12 pb-12">
+                                <div class="category text-subtitle">subtitlesubtitlesubtitlesubtitlesubtitle</div>
+                                <div class="title text-title">titletitletitletitletitletitle</div>
+                            </div>
+                            <div class="space-right pt-12 pr-12 pb-12">
+                                <a href="#" class="material-icons d-flex align-items-center">settings</a>
+                            </div>
+                        </h5>
+                        <div class="card-body pt-3 pl-3 pr-32 pb-0">
+                            <div class="media d-flex align-items-center mb-3">
+                                <div class="img profileImg mr-2" style="background-image: url(https://images.unsplash.com/photo-1514794749374-fb67509dbb7f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80);"></div>
+                                <div class="media-body d-flex justify-content-between align-items-center">
+                                    <div class="space-left">
+                                        <h5 class="m-0 text-title lh-24">asdadsadadsad</h5>
+                                        <p class="text-remark m-0">text text text</p>
+                                    </div>
+                                    <div class="space-right d-flex">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mailContent pl-5 text-content pb-3">
+                                Hi Teacher, the attached file is my homework of chapter 2. And here comes a question: Why in the following code the height of the <span class="text-code">div</span> is bigger than the height of the <span class="text-code">img</span> ? There is a gap below the image, but it doesn’t seems to be a padding/margin. <br>
+                                What is the gap or extra space below image?
+                            </div>
+                            <a href="#" class="text-title d-inline-flex align-items-center downloadBtn ml-5 bg-secondary project_color_border pt-2 pl-12 pb-2 pr-12 rounded-2px">
+                                <div class="material-icons mr-2">settings</div>
+                                download
+                            </a>
+                            <hr class="ml-5 mb-0">
+                        </div>
+                        <div class="card-body pt-3 pl-3 pr-32 pb-0">
+                            <div class="media d-flex align-items-center mb-3">
+                                <div class="img profileImg mr-2" style="background-image: url(https://images.unsplash.com/photo-1514794749374-fb67509dbb7f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80);"></div>
+                                <div class="media-body d-flex justify-content-between align-items-center">
+                                    <div class="space-left">
+                                        <h5 class="m-0 text-title lh-24">text text</h5>
+                                        <p class="text-remark m-0">text text text</p>
+                                    </div>
+                                    <div class="space-right d-flex">
+                                        <a href="#" class="material-icons d-flex align-items-center">settings</a>
+                                        <a href="#" class="material-icons d-flex align-items-center ml-4">settings</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mailContent pl-5 text-content pb-3">
+                                Hi David, by default, an image is rendered inline, like a letter so it sits on the same line that a, b, c and d sit on. There is space below that line for the descenders you find on letters like g, j, p and q.
+                                <br>
+                                <br>
+                                You can:
+                                <br>
+                                <br>
+                                <ul class="m-0 pl-3">
+                                    <li>adjust the <span class="text-code">vertical-align</span> of the image to position it elsewhere (e.g. the <span class="text-code">middle</span>)</li>
+                                    <li>change the <span class="text-code">display</span> so it isn’t inline.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <br class="pb-2">
+                    </div>
+                </div>
+                <div class="replyBlock collapse position-absolute w-100 transition-ms300" id="replyBlock">
+                    <div class="card project_color_border">
+                        <div class="card-header bg-secondary px-4 py-3 d-flex">
+                            <button class="btn dropdown-toggle text-title p-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2">Body Text</span>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                            <a href="#" class="material-icons ml-4 d-flex align-items-center">format_bold</a>
+                            <a href="#" class="material-icons ml-4 d-flex align-items-center">format_italic</a>
+                            <a href="#" class="material-icons ml-4 d-flex align-items-center">format_list_bulleted</a>
+                            <a href="#" class="material-icons ml-4 d-flex align-items-center">format_list_numbered</a>
+                            <a href="#" class="material-icons ml-4 d-flex align-items-center">image</a>
+                            <a href="#" class="material-icons ml-4 d-flex align-items-center">insert_link</a>
+                            <a href="#" class="material-icons ml-4 d-flex align-items-center">code</a>
+                        </div>
+                        <textarea class="card-body border-0 py-3 px-4" placeholder="Reply an answer…"></textarea>
+                        <div class="replyBlock__footer d-flex justify-content-end pr-4 pb-3">
+                            <a data-toggle="collapse" href="#replyBlock" class="btn btn-outline-primary pt-2 pb-2 pl-32 pr-32 font-weight-bold">Cancel</a>
+                            <a href="#" class="btn btn-primary ml-3 pt-2 pb-2 pl-32 pr-32 font-weight-bold">Reply</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer pt-3 d-flex justify-content-between align-items-center">
+                    <div class="space-left d-flex align-items-center">
+                        <a href="#" class="material-icons">keyboard_arrow_left</a>
+                        <a href="#" class="material-icons ml-4">keyboard_arrow_right</a>
+                    </div>
+                    <div class="space-right d-flex align-items-center position-relative">
+                        <a href="#" class="btn btn-outline-primary pt-2 pb-2 pl-32 pr-32 font-weight-bold">Mark as read</a>
+                        <a data-toggle="collapse" href="#replyBlock" class="btn btn-primary ml-3 pt-2 pb-2 pl-32 pr-32 font-weight-bold">Reply</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- BS4 -->
+    <section>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    </section>
+</body>
+</html>

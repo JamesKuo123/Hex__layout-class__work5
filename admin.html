@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- font-family: 'Lato', sans-serif; -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <!-- font-family: 'Roboto Mono', monospace; -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <!-- icon cdn-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- project css -->
+    <link rel="stylesheet" href="./assets/style/all.css">
+</head>
+<body>
+    
+    <div class="side d-flex flex-column">
+        <div class="side__header pt-32 pl-32 pb-32">
+            <h1 class="logo lh-24">
+                <a href="index.html">
+                    <img src="./assets/images/logo-ANSWER.svg" alt="logo">
+                </a>
+            </h1>
+        </div>
+        <div class="side__body flex-grow-1">
+            <ul class="menu list-unstyled">
+                <li class="item mb-4">
+                    <a href="#" class="text-title pl-32 position-relative d-flex align-items-center">
+                        <span class="material-icons mr-3">insert_chart</span>
+                        Dashboard
+                    </a>
+                </li>
+                <li class="item mb-4">
+                    <a href="#" class="text-title pl-32 position-relative d-flex align-items-center">
+                        <span class="material-icons mr-3">forum</span>
+                        Question
+                    </a>
+                </li>
+                <li class="item mb-4">
+                    <a href="index.html" class="text-title pl-32 position-relative d-flex align-items-center">
+                        <span class="material-icons mr-3">assignment</span>
+                        Assignment
+                    </a>
+                </li>
+                <li class="item mb-4">
+                    <a href="#" class="text-title pl-32 position-relative d-flex align-items-center">
+                        <span class="material-icons mr-3">video_library</span>
+                        Course
+                    </a>
+                </li>
+                <li class="item mb-4 active">
+                    <a href="admin.html" class="text-title pl-32 position-relative d-flex align-items-center">
+                        <span class="material-icons mr-3">group</span>
+                        Admin
+                    </a>
+                </li>
+                <li class="item mb-4">
+                    <a href="#" class="text-title pl-32 position-relative d-flex align-items-center">
+                        <span class="material-icons mr-3">settings</span>
+                        Settings
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="side__footer pl-32 pb-32">
+            <div class="media d-flex align-items-center">
+                <div class="img profileImg mr-3" style="background-image: url(https://images.unsplash.com/photo-1514794749374-fb67509dbb7f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80);"></div>
+                <div class="media-body">
+                  <h5 class="m-0 text-title lh-24">Andy Chen</h5>
+                  <span>andy0401@mail.com</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main p-32">
+        <div class="main__header d-flex justify-content-between align-items-center pb-32 mb-12">
+            <div class="space-left d-flex align-items-center">
+                <h2 class="title mb-0 lh-24">Admin</h2>
+                <div class="modalBtn">
+                    <button class="btn text-title d-flex align-items-center p-0 border-0" type="button" data-toggle="modal" data-target="#addNewMin">
+                        <span class="material-icons mr-2 color_primary">add</span>
+                        Add New Admin
+                    </button>
+                    <div class="addNewMin modal fade" id="addNewMin" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-scrollable">
+                            <div class="modal-content project_color_border rounded-2px">
+                                <div class="modal-header p-32 border-0 d-flex align-items-center">
+                                  <h5 class="modal-title lh-24">New Admin</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span class="material-icons color_text" aria-hidden="true">
+                                        close
+                                    </span>
+                                  </button>
+                                </div>
+                                <div class="modal-body py-0 pl-32 pr-32">
+                                    <div class="modalContentBlock">
+                                        <div class="modalContentBlock__title mb-3">
+                                            Account
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="addNewMin__name" class="modalContentBlock__label m-0">Name</label>
+                                            <input type="text" class="form-control h-auto rounded-2px p-3" id="addNewMin__name" aria-describedby="emailHelp">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="addNewMin__name" class="modalContentBlock__label m-0">Email</label>
+                                            <input type="email" class="form-control h-auto rounded-2px p-3" id="addNewMin__email" aria-describedby="emailHelp">
+                                        </div>
+                                    </div>
+                                    <hr class="border-secondary my-4">
+                                    <div class="modalContentBlock">
+                                        <div class="modalContentBlock__title mb-3">
+                                            Verification
+                                        </div>
+                                        <div class="labelWarning d-flex align-items-center mb-3">
+                                            <span class="material-icons mr-2">warning</span>
+                                            Unverified
+                                        </div>
+                                        <button type="submit" class="modalContentBlock__btn btn btn-outline-primary rounded-2px w-100 py-3">Send Verification Mail</button>
+                                    </div>
+                                    <hr class="border-secondary my-4">
+                                    <div class="modalContentBlock">
+                                        <div class="modalContentBlock__title mb-3">
+                                            Access Level
+                                        </div>
+                                        <div class="form-group">
+                                            <select class="select p-3 project_color_border rounded-2px w-100 h-auto custom-select">
+                                                <option value="1" selected>-Choose access level-</option>
+                                                <option value="2">A</option>
+                                                <option value="3">B</option>
+                                                <option value="4">C</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <hr class="border-secondary my-4">
+                                    <div class="modalContentBlock">
+                                        <div class="modalContentBlock__title mb-3">
+                                            Custom Access
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="custom-control custom-checkbox mb-3">
+                                                <input type="checkbox" class="custom-control-input" id="checkbox1" name="example1">
+                                                <label class="custom-control-label" for="checkbox1">Lecture</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox mb-3">
+                                                <input type="checkbox" class="custom-control-input" id="checkbox2" name="example1">
+                                                <label class="custom-control-label" for="checkbox2">Coupon</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox mb-3">
+                                                <input type="checkbox" class="custom-control-input" id="checkbox3" name="example1">
+                                                <label class="custom-control-label" for="checkbox3">Message</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox mb-3">
+                                                <input type="checkbox" class="custom-control-input" id="checkbox4" name="example1">
+                                                <label class="custom-control-label" for="checkbox4">Setting</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox mb-3">
+                                                <input type="checkbox" class="custom-control-input" id="checkbox5" name="example1">
+                                                <label class="custom-control-label" for="checkbox5">Task Menu</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer py-3 pl-32 pr-32 border-0">
+                                  <button type="button" class="btn btn-outline-primary rounded-2px py-2 pl-32 pr-32 m-0 font-weight-bold" data-dismiss="modal">Cancel</button>
+                                  <button type="button" class="btn btn-primary rounded-2px ml-3  py-2 pl-32 pr-32 m-0 font-weight-bold">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="space-right">
+                <ul class="toolbar d-flex m-0 list-unstyled">
+                    <li class="item ml-4">
+                        <a href="#" class="d-flex align-items-center">
+                            <span class="material-icons">search</span>
+                        </a>
+                    </li>
+                    <li class="item ml-4">
+                        <a href="#" class="d-flex align-items-center">
+                            <span class="material-icons">notifications_active</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main__body">
+            <table class="table table-hover">
+                <thead class="text-title">
+                  <tr>
+                    <th class="border-top-0 p-0">
+                        <p class="d-flex align-items-center m-0">ID <span class="material-icons text-primary ml-2">arrow_downward</span></p>
+                    </th>
+                    <th class="border-top-0 p-0">
+                        <p class="d-flex align-items-center m-0">Name</p>
+                    </th>
+                    <th class="border-top-0 p-0">
+                        <p class="d-flex align-items-center m-0">Email</p>
+                    </th>
+                    <th class="border-top-0 p-0">
+                        <p class="d-flex align-items-center m-0">Verified</p>
+                    </th>
+                    <th class="border-top-0 p-0">
+                        <p class="d-flex align-items-center m-0"></p>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="px-2">#1</td>
+                    <td class="px-0">Emir Wicks</td>
+                    <td class="px-0">emir.wicks@mail.com</td>
+                    <td class="px-0">Yes</td>
+                    <td class="px-2 text-right">
+                        <a href="#" class="material-icons mr-3" type="button" data-toggle="modal" data-target="#viewProfile">visibility</a>
+                        <a href="#" class="material-icons" type="button" data-toggle="modal" data-target="#editProfile">edit</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="px-2">#1</td>
+                    <td class="px-0">Emir Wicks</td>
+                    <td class="px-0">emir.wicks@mail.com</td>
+                    <td class="px-0">Yes</td>
+                    <td class="px-2 text-right">
+                        <a href="#" class="material-icons mr-3" type="button" data-toggle="modal" data-target="#viewProfile">visibility</a>
+                        <a href="#" class="material-icons" type="button" data-toggle="modal" data-target="#editProfile">edit</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="px-2">#1</td>
+                    <td class="px-0">Emir Wicks</td>
+                    <td class="px-0">emir.wicks@mail.com</td>
+                    <td class="px-0">Yes</td>
+                    <td class="px-2 text-right">
+                        <a href="#" class="material-icons mr-3" type="button" data-toggle="modal" data-target="#viewProfile">visibility</a>
+                        <a href="#" class="material-icons" type="button" data-toggle="modal" data-target="#editProfile">edit</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="px-2">#1</td>
+                    <td class="px-0">Emir Wicks</td>
+                    <td class="px-0">emir.wicks@mail.com</td>
+                    <td class="px-0">Yes</td>
+                    <td class="px-2 text-right">
+                        <a href="#" class="material-icons mr-3" type="button" data-toggle="modal" data-target="#viewProfile">visibility</a>
+                        <a href="#" class="material-icons" type="button" data-toggle="modal" data-target="#editProfile">edit</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="px-2">#1</td>
+                    <td class="px-0">Emir Wicks</td>
+                    <td class="px-0">emir.wicks@mail.com</td>
+                    <td class="px-0">Yes</td>
+                    <td class="px-2 text-right">
+                        <a href="#" class="material-icons mr-3" type="button" data-toggle="modal" data-target="#viewProfile">visibility</a>
+                        <a href="#" class="material-icons" type="button" data-toggle="modal" data-target="#editProfile">edit</a>
+                    </td>
+                  </tr>
+                </tbody>
+            </table>
+            <div class="viewProfile modal fade" id="viewProfile" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content project_color_border rounded-2px">
+                            <div class="media p-32">
+                                <div class="img w-140 h-140 bgimg-centered bgimg-sized-X-bigger mr-4" style="background-image: url(https://images.unsplash.com/photo-1522069394066-326005dc26b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);"></div>
+                                <div class="media-body">
+                                  <div class="media-body-header d-flex align-items-center justify-content-between mb-2">
+                                      #1
+                                      <button class="btn text-title d-flex align-items-center p-0 border-0" type="button" data-toggle="modal" data-target="#viewProfile">
+                                        <span class="material-icons">close</span>
+                                      </button>
+                                  </div>
+                                  <p class="fz-16 lh-1andHalf mb-0">Admin</p>
+                                  <p class="fz-24 lh-1andHalf font-weight-bold mb-2">Emir Wicks</p>
+                                  <p class="fz-14 lh-24 color_remark mb-3">emir.wicks@mail.com</p>
+                                  <div class="media-body-footer d-flex justify-content-between align-items-center">
+                                      <div class="text fz-14 lh-24 py-1 px-2 rounded-2px bg-secondary">
+                                          Verified
+                                      </div>
+                                      <a class="collapseBtn btn d-flex align-items-center p-0 color_primary" data-toggle="collapse" href="#viewProfileCollapse" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                          <span class="material-icons">keyboard_arrow_down</span>
+                                      </a>
+                                  </div>
+                                  <div class="collapse" id="viewProfileCollapse">
+                                    <div class="btn btn-outline-warning py-2 pl-32 pr-32 mt-32">Deactivate</div>
+                                    <div class="btn btn-primary py-2 pl-32 pr-32 ml-3 mt-32">Edit</div>
+                                  </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+            </div>
+            <div class="editProfile modal fade" id="editProfile" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content project_color_border rounded-2px">
+                        <div class="modal-header p-32 border-0 d-flex align-items-center">
+                            <h5 class="modal-title lh-24">Edit Admin</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span class="material-icons color_text" aria-hidden="true">
+                                  close
+                              </span>
+                            </button>
+                          </div>
+                          <div class="modal-body py-0 pl-32 pr-32">
+                              <div class="modalContentBlock">
+                                  <div class="modalContentBlock__title mb-3">
+                                      Account
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="addNewMin__name" class="modalContentBlock__label m-0">Name</label>
+                                      <input type="text" class="form-control h-auto rounded-2px p-3" id="addNewMin__name" aria-describedby="emailHelp" disabled placeholder="Emir Wicks">
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="addNewMin__name" class="modalContentBlock__label m-0">Email</label>
+                                      <input type="email" class="form-control h-auto rounded-2px p-3" id="addNewMin__email" aria-describedby="emailHelp" disabled placeholder="emir.wicks@mail.com">
+                                  </div>
+                              </div>
+                              <hr class="border-secondary my-4">
+                              <div class="modalContentBlock">
+                                  <div class="modalContentBlock__title mb-3">
+                                      Verification
+                                  </div>
+                                  <div class="label d-flex justify-content-between mb-3">
+                                      <span class="d-flex align-items-center"><span class="material-icons mr-2 color_primary">check_circle</span>Verified</span> 
+                                      <span class="date">2020/4/12</span>
+                                  </div>
+                                  <button type="submit" class="modalContentBlock__btn btn btn-outline-primary rounded-2px w-100 py-3" disabled>Send Verification Mail</button>
+                              </div>
+                              <hr class="border-secondary my-4">
+                              <div class="modalContentBlock">
+                                  <div class="modalContentBlock__title mb-3">
+                                      Access Level
+                                  </div>
+                                  <div class="form-group">
+                                      <select class="select p-3 project_color_border rounded-2px w-100 h-auto custom-select">
+                                          <option value="1" selected>Admin</option>
+                                          <option value="2">A</option>
+                                          <option value="3">B</option>
+                                          <option value="4">C</option>
+                                      </select>
+                                  </div>
+                              </div>
+                              <hr class="border-secondary my-4">
+                              <div class="modalContentBlock">
+                                  <div class="modalContentBlock__title mb-3">
+                                      Custom Access
+                                  </div>
+                                  <div class="form-group">
+                                      <div class="custom-control custom-checkbox mb-3">
+                                          <input type="checkbox" class="custom-control-input" id="editCheckbox1" name="example1">
+                                          <label class="custom-control-label" for="editCheckbox1">Lecture</label>
+                                      </div>
+                                      <div class="custom-control custom-checkbox mb-3">
+                                          <input type="checkbox" class="custom-control-input" id="editCheckbox2" name="example1">
+                                          <label class="custom-control-label" for="editCheckbox2">Coupon</label>
+                                      </div>
+                                      <div class="custom-control custom-checkbox mb-3">
+                                          <input type="checkbox" class="custom-control-input" id="editCheckbox3" name="example1">
+                                          <label class="custom-control-label" for="editCheckbox3">Message</label>
+                                      </div>
+                                      <div class="custom-control custom-checkbox mb-3">
+                                          <input type="checkbox" class="custom-control-input" id="editCheckbox4" name="example1">
+                                          <label class="custom-control-label" for="editCheckbox4">Setting</label>
+                                      </div>
+                                      <div class="custom-control custom-checkbox mb-3">
+                                          <input type="checkbox" class="custom-control-input" id="editCheckbox5" name="example1">
+                                          <label class="custom-control-label" for="editCheckbox5">Task Menu</label>
+                                      </div>
+                                  </div>
+                              </div>
+                              <hr class="border-secondary my-4">
+                              <div class="modalContentBlock mb-32">
+                                <div class="modalContentBlock__title mb-3">
+                                    Deactivate Account
+                                </div>
+                                <div class="label d-flex justify-content-between mb-3">
+                                    <span class="d-flex align-items-center color_warning"><span class="material-icons mr-2">warning</span>This cannot be undone!</span> 
+                                </div>
+                                <button type="submit" class="modalContentBlock__btn btn btn-outline-warning rounded-2px w-100 py-3">Deactivate This Account</button>
+                            </div>
+                          </div>
+                          <div class="modal-footer py-3 pl-32 pr-32 border-0">
+                            <button type="button" class="btn btn-outline-primary rounded-2px py-2 pl-32 pr-32 m-0 font-weight-bold" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary rounded-2px ml-3  py-2 pl-32 pr-32 m-0 font-weight-bold">Update</button>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main__footer">
+            <nav aria-label="Page navigation example" class="position-absolute">
+                <ul class="pagination">
+                  <li class="page-item"><a class="page-link material-icons fz-16" href="#">keyboard_arrow_left</a></li>
+                  <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link material-icons fz-16" href="#">keyboard_arrow_right</a></li>
+                </ul>
+              </nav>
+        </div>
+    </div>
+
+    <!-- BS4 -->
+    <section>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    </section>
+</body>
+</html>
